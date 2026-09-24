@@ -4,10 +4,10 @@ sudoku(S) :-
     % general layout
     length(S, 9),
     maplist(same_length(S), S),
-    maplist(valid_sodoku_nums, S),
-    append(S, Vs),
-    Vs ins 1..9,
+    append(S, F),
+    F ins 1..9,
     % content requirements
+    maplist(valid_sodoku_nums, S),
     transpose(S, T),
     maplist(valid_sodoku_nums, T),
     [R1, R2, R3, R4, R5, R6, R7, R8, R9] = S,
