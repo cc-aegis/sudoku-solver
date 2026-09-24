@@ -15,7 +15,7 @@ sudoku(S) :-
     valid_boxes(R4, R5, R6),
     valid_boxes(R7, R8, R9),
     % labeling
-    labeling([ff], Vs).
+    labeling([ff], F).
 
 valid_boxes([], [], []).
 valid_boxes([A, B, C | R1], [D, E, F | R2], [G, H, I | R3]) :-
